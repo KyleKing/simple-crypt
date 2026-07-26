@@ -2,9 +2,18 @@
 
 Simple, secure encryption and decryption for Python 3.
 
-Now on [pypi](http://pypi.python.org/pypi/simple-crypt):
-```pip install simple-crypt```
-(note that the pypi name includes a hyphen).
+> [!NOTE]
+> This is a fork of [andrewcooke/simple-crypt](https://github.com/andrewcooke/simple-crypt),
+> maintained by [KyleKing](https://github.com/KyleKing).
+> The [pypi package](http://pypi.python.org/pypi/simple-crypt)
+> (`pip install simple-crypt`) Andrew Cooke's original, which depends on the
+> unmaintained `pycrypto` package. To support modern Python 3.10+, this fork
+> implements backwards compatible encryption with
+> [pycryptodome](https://github.com/Legrandin/pycryptodome).
+>
+> Because this fork has not yet been published on PyPi,
+> install it directly from GitHub:
+> `pip install git+https://github.com/KyleKing/simple-crypt.git`
 
 This provides two functions, which encrypt and decrypt data, delegating all
 the hard work to the [pycryptodome](https://github.com/Legrandin/pycryptodome)
@@ -207,7 +216,7 @@ as far as I can tell:
 * On decryption, the header is checked and the HMAC validated before
   decryption.
 
-The [entire implementation is here](https://github.com/andrewcooke/simple-crypt/blob/master/src/simplecrypt/__init__.py).
+The [entire implementation is here](https://github.com/KyleKing/simple-crypt/blob/master/src/simplecrypt/__init__.py).
 
 Discussion and criticism of the design can be found on
 [HN](http://news.ycombinator.com/item?id=4962983)
@@ -289,6 +298,6 @@ to be a demand for this, so better the devil you know...
    data to be silently truncated at the end of a block).
 
 (c) 2012-2015 Andrew Cooke, andrew@acooke.org; 2013
-[d10n](https://github.com/d10n), david@bitinvert.com; 2020-2021
+[d10n](https://github.com/d10n), david@bitinvert.com; 2020-2026
 [KyleKing](https://github.com/KyleKing).
 Released into the public domain for any use, but with absolutely no warranty.
