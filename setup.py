@@ -5,7 +5,7 @@ import setuptools
 setup(
     name = 'simple-crypt',
     keywords = ['aes', 'encrypt', 'decrypt', 'encryption', 'decryption', 'pbkdf2', 'hmac', 'secure', 'crypto', 'cryptography'],
-    url = 'https://github.com/andrewcooke/simple-crypt',
+    url = 'https://github.com/KyleKing/simple-crypt',
     requires = 'pycryptodome',
     install_requires = ['pycryptodome'],
     packages = ['simplecrypt'],
@@ -17,14 +17,23 @@ setup(
     classifiers = ['Development Status :: 5 - Production/Stable',
                    'Intended Audience :: Developers',
                    'License :: Public Domain',
-                   'Programming Language :: Python :: 3.6',
                    'Programming Language :: Python :: 3.7',
                    'Programming Language :: Python :: 3.8',
                    'Programming Language :: Python :: 3.9',
+                   'Programming Language :: Python :: 3.10',
+                   'Programming Language :: Python :: 3.11',
+                   'Programming Language :: Python :: 3.12',
+                   'Programming Language :: Python :: 3.13',
                    'Topic :: Security',
                    'Topic :: Security :: Cryptography',
                    'Topic :: Software Development'],
     long_description = '''
+This is a fork of `andrewcooke/simple-crypt
+<https://github.com/andrewcooke/simple-crypt>`_, maintained by
+`KyleKing <https://github.com/KyleKing>`_. It is not the package published
+on PyPI as ``simple-crypt``; install it directly from
+`github <https://github.com/KyleKing/simple-crypt>`_.
+
 What Does Simple Crypt Do?
 --------------------------
 
@@ -36,7 +45,7 @@ and ``decrypt``::
     plaintext = decrypt('password', ciphertext)
 
 That's it.  You can see the implementation on
-`github <https://github.com/andrewcooke/simple-crypt/blob/master/src/simplecrypt/__init__.py>`_.
+`github <https://github.com/KyleKing/simple-crypt/blob/master/src/simplecrypt/__init__.py>`_.
 
 Why Should I Use Simple Crypt?
 ------------------------------
@@ -81,7 +90,7 @@ What Else Should I Know?
     mystring = decrypt('password', ciphertext).decode('utf8')
 
 
-* More `documentation and examples <https://github.com/andrewcooke/simple-crypt>`_.
+* More `documentation and examples <https://github.com/KyleKing/simple-crypt>`_.
 
 * Later versions *can* decrypt data from previous versions, but data
   encrypted by later (major) versions *cannot* be decrypted by earlier
@@ -90,7 +99,7 @@ What Else Should I Know?
 
 * (c) 2012-2015 Andrew Cooke, andrew@acooke.org;
   2013 `d10n <https://github.com/d10n>`_, david@bitinvert.com;
-  2020-2021 `KyleKing <https://github.com/KyleKing>`.
+  2020-2026 `KyleKing <https://github.com/KyleKing>`.
   Released into the public domain for any use, but with absolutely no warranty.
 '''
 )
