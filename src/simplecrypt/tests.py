@@ -173,7 +173,7 @@ class TestRandBytes(TestCase):
         assert 255 == reduce(lambda x, y: x | y, bytearray(b)), b
 
     def test_all_values(self):
-        b = _random_bytes(255*10)
+        b = _random_bytes(255*40)
         assert reduce(lambda a, b: a and b, (n in b for n in range(256)), True)
         b = _random_bytes(255)
         assert not reduce(lambda a, b: a and b, (n in b for n in range(256)), True)

@@ -2,7 +2,7 @@
 from Crypto.Cipher import AES
 from Crypto.Hash import SHA256, HMAC
 from Crypto.Protocol.KDF import PBKDF2
-from Crypto.Random.random import getrandbits
+from Crypto.Random import get_random_bytes
 from Crypto.Util import Counter
 
 # see: http://www.daemonology.net/blog/2009-06-11-cryptographic-right-answers.html
@@ -134,7 +134,7 @@ def _hide(ranbytes):
     return bytearray(_pbkdf2(bytes(ranbytes), b'', len(ranbytes), 1))
 
 def _random_bytes(n):
-    return _hide(bytearray(getrandbits(8) for _ in range(n)))
+    return _hide(bytearray(get_random_bytes(n)))
 
 def _hmac(key, data):
     return HMAC.new(key, data, HASH).digest()
